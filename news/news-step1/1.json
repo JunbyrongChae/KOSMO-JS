@@ -1,0 +1,38 @@
+[
+    {
+        "id": 42143269,
+        "title": "Relativty: An open-source VR headset for $200",
+        "points": 34,
+        "user": "LorenDB",
+        "time": 1731635729,
+        "time_ago": "25 minutes ago",
+        "comments_count": 5,
+        "type": "link",
+        "url": "https://www.relativty.com/",
+        "domain": "relativty.com"
+    },
+    {
+        "id": 42141587,
+        "title": "Visual Basic 6 IDE recreated in C#",
+        "points": 177,
+        "user": "porterde",
+        "time": 1731620874,
+        "time_ago": "5 hours ago",
+        "comments_count": 56,
+        "type": "link",
+        "url": "https://github.com/BAndysc/AvaloniaVisualBasic6",
+        "domain": "github.com"
+    },
+    {
+        "id": 42135520,
+        "title": "MomBoard: E-ink display for a parent with amnesia",
+        "points": 1217,
+        "user": "pabs3",
+        "time": 1731586840,
+        "time_ago": "14 hours ago",
+        "comments_count": 148,
+        "type": "link",
+        "url": "https://jan.miksovsky.com/posts/2024/11-12-momboard",
+        "domain": "jan.miksovsky.com"
+    }
+]

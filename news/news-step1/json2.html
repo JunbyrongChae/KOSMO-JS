@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET","http://127.0.0.1:5500/news-step1/1.json",false);
+        ajax.send();
+        const res = ajax.response;
+        //console.log(typeof res)//string
+        //console.log(res)
+        const imsi = JSON.parse(res);//array = 3row
+        //document.write(imsi);
+        document.write("<table border='1' width='900px'>")
+            for(let i =0;i<imsi.length;i++){
+                document.write("<tr>")
+                document.write(`<td width='100px'>${imsi[i].id}</td><td width='300px'>${imsi[i].title}</td><td width='500px'><a href='${imsi[i].url}'>${imsi[i].url}</a></td>`)
+                document.write("</tr>")
+            }
+        document.write("</table>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    /* 1. padding이나 border사이즈가 width나 height에 포함될 수  있도록 해줌 */
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #ced3df;
+    /* 섹션 중앙 배치 */
+    text-align: center;
+}
+
+.list {
+    width: 400px;
+    margin: auto;
+    background-color: #f1f0f7;
+    border-radius: 20px;
+}
+
+.header {
+    height: 48px;
+    padding: 8px;
+    font-size: 24px;
+    background-color: rgb(2,0,36);
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 88%);
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+ul {
+    /* ul태그의 기본적인 패딩 없앰 */
+    padding: 0;
+    list-style: none;
+}
+
+.items {
+    height: 500px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    /* 위 아래는 8px 양옆은 32px */
+    padding: 8px 32px;
+}
+
+.item_delete {
+    font-size: 16px;
+    transition: all 300ms ease-in;
+}
+
+.item_delete:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+.item_divider {
+    width: 90%;
+    height: 2px;
+    margin: auto;
+    background-color: lightgray;
+}
+
+.footer {
+    background-color: rgb(2,0,36);
+    border-radius: 0 0 20px 20px;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 88%);
+}
+
+.footer_input {
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0 16px;
+}
+
+.footer_plus {
+    color: white;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 300ms ease-in;
+}
+
+.footer_plus:hover {
+    transform: scale(1.1);
+}

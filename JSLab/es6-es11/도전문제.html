@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - 구조분해,spread연산</title>
+</head>
+<body>
+    <!-- <script type="module"> -->
+    <script type="text/javascript">
+        let items = [
+            { id: 1, name: "Bench Press", count: 10 }
+            , { id: 2, name: "Squat", count: 5 }
+            , { id: 3, name: "Deadlift", count: 15 }
+        ]
+        let items_copy = [...items, { id: 4, name: "Lat Pulldown", count: 20 }]
+        document.write('<div>')
+        document.write('<table border="1" bordercolor="red">')
+        items_copy.forEach((item) => {
+            document.write('<tr>')
+            document.write(`<td>${item.id}</td>`)
+            document.write(`<td>${item['name']}</td>`)
+            document.write(`<td>${item.count}</td>`)
+            document.write('</tr>')
+        })
+        document.write('</table>')
+        document.write('<div>')
+        //수정하기
+        //사용자로부터 수정하고자 하는 id를 입력
+        let x = [...items_copy]
+        let user = window.prompt("Insert new ID to Update");
+        console.log('Insert ID : ' + user)
+        x.forEach((item) => {
+            if (item.id === parseInt(user)) {
+                //아이디가 다른것들을 배열에 담아둔다
+                x = items_copy.filter((item) => {item.id !== parseInt(user)})
+                //수정할 객체를 수정 후 머지
+                x=[...x,{id:parseInt(user),name:"Lat Pulldown",count:10}]
+            }
+        })
+        document.write('<div>')
+        document.write('<table border="1" bordercolor="red">')
+        x.forEach((item) => {
+            document.write('<tr>')
+            document.write(`<td>${item.id}</td>`)
+            document.write(`<td>${item['name']}</td>`)
+            document.write(`<td>${item.count}</td>`)
+            document.write('</tr>')
+        })
+        document.write('</table>')
+        document.write('<div>')
+    </script>
+</body>
+</html>

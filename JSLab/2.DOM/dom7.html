@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트로 화면 그리기</title>
+
+</head>
+    <script>
+        //현재 페이지 이름은 dom7.html - 이 파일을 객체로 만들어준다
+        //window -> document -> html
+        //html 안에는 css,javascript 파일이 공존 가능
+        //html파일을 통해서 화면을 랜더링. 이때 css는 일관된 디자인 적용가능함
+        //브라우저가 dom tree 그린다.-css그린다.-> rander treermflsek
+        //자바스크립트로 클래스 선택자나 아이디 선택자에 접근 가능함 - 그래서 deeper를 사용
+        //html문서는 차례대로 처리 1번~>마지막 라인
+        //그런데 script가 heep에 중간에 나타나 지연발생
+        //백엔드에서 처리할 내용은 우선순위가 화면에 밀린다.
+        window.onload = () => {
+            //실행문 (변수선언, 제어문사용 - 반복,선택문제 - 로직)
+            //자바스크립트로 화면을 그릴 때 dom(document object model)의 api를 사용 할 수 있다.
+            //가독성은 떨어짐, 트리구조가 보이지 않음
+            const header = document.createElement("h1");
+            const textNode = document.createTextNode("DOM Tree1");
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+        }
+    </script>
+    <hr />
+    <h2>DOM Tree2</h2>
+</body>
+</html>

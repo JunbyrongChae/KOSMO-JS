@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해커뉴스-step5</title>
+    <script src="./news5.js"defer></script>
+</head>
+<body>
+    <!-- 
+    부제 : 라우터 화면 처리기 만들기
+    -->
+    <div id="root"></div>
+</body>
+</html>
+<!-- 
+현재는 목록과 내용이 같은 화면에 보인다.
+왜인지 살펴보면 어떻게 바꿀지 힌트를 얻을 수 있다.
+
+지금 기본적으로HTML 구조는?
+HTML 파일 자체를 보면 그냥 id가 root인 div태그가 하나뿐
+그리고 js코드에서는 div태그 즉 containrt를 가져다 쓰고 씀
+두군데에서 사용중인데 최하단부 appendChild(ul)을 하고있고 appendChild(content)을 하고있다
+이 content.appendChild하는 부분은 hashchange 이벤트핸들러에 보면 또 있다.
+이 코드를 보면 container에 appendChild즉 추가하는 코드만 있다.
+추가란?
+기존걸 유지한다는 것이 핵심
+기존걸 유지하므로 목록화면에서 내용화면으로 진입했을 때 목록화면이 유지
+
+그러므로 사용자 입장에서 2개의 화면을 동시에 다 보고 있는 상태가 만들어질 수 밖에 없다.
+
+appendChild를 쓰지 않는 방법
+일단 내용 화면으로 진입하면 기존 목록화면에서 모두 없앤다.
+즉, appendChild를 쓰지 않는다.
+-->

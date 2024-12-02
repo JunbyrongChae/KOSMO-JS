@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker-1단계</title>
+    <link rel="stylesheet" href="./tracker1.css">
+    <script src="https://kit.fontawesome.com/8347ef8aff.js" crossorigin="anonymous"></script>
+    <script src="./tracker1.js" defer></script>
+</head>
+<body>
+    <script>
+        //선언됨 배열을 활용하여 목록 처리한다.
+        const items = [
+            {id:1,name:"Bench Press",count:0},
+            {id:2,name:"Squat",count:0},
+            {id:3,name:"Deadlift",count:0}
+        ]
+    </script>
+    <div id="Workout-app">
+        <h2>Workout Tracker</h2>
+        <ul class="workout-list">
+            <li class="workout">
+                <span class="workout-name">Bench Press</span><br>
+                <span class="workout-count">0</span>
+                <button class="workout-button workout-increase"><i class="fas fa-plus-square"></i></button>
+                <button class="workout-button workout-decrease"><i class="fas fa-minus-square"></i></button>
+                <button class="workout-button workout-delete"><i class="fas fa-trash"></i></button><br>
+            </li>
+            <li class="workout">
+                <span class="workout-name">Squat</span><br>
+                <span class="workout-count">0</span>
+                <button class="workout-button workout-increase"><i class="fas fa-plus-square"></i></button>
+                <button class="workout-button workout-decrease"><i class="fas fa-minus-square"></i></button>
+                <button class="workout-button workout-delete"><i class="fas fa-trash"></i></button><br>
+            </li>
+            <li class="workout">
+                <span class="workout-name">Deadlift</span><br>
+                <span class="workout-count">0</span>
+                <button class="workout-button workout-increase"><i class="fas fa-plus-square"></i></button>
+                <button class="workout-button workout-decrease"><i class="fas fa-minus-square"></i></button>
+                <button class="workout-button workout-delete"><i class="fas fa-trash"></i></button><br>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const btn_increase = document.querySelector('.workout-increase');
+        btnIncrease.addEventListener('click', () => handleIncrement())
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM API - dom3</title>
+    <script>
+        //자바스크립트에서는 메소드가 아니라 함수라고 한다. - 다른점은 리턴타입을 따로 적지 않음
+        function methodA(){
+            //alert("methodA호출 성공")
+            const h3 = document.querySelector("h3")
+            console.log(h3)
+        }
+    </script>
+</head>
+<body onload="methodA()">
+    <h3>hello</h3>
+</body>
+</html>

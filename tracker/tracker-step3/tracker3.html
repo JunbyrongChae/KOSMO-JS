@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker-3단계</title>
+    <link rel="stylesheet" href="./tracker3.css">
+    <script src="https://kit.fontawesome.com/8347ef8aff.js" crossorigin="anonymous"></script>
+    <script src="./tracker3.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <i class="navbar-logo fas fa-leaf"></i>
+        <span>Workout Tracker</span>
+        <span class="navbar-count">0</span>
+    </div>
+    <div id="Workout-app">
+        <!-- 
+        <form>:폼태그
+        폼태그 안에 있는 컴포넌트에 입력값을 서버로 전송 가능
+        그런데 목적지에 대한 url이 없더라도 전송이 처리되어 기존화면에대한 정보를 잃어버림
+        - 대응필요 - submit()전송이 동반됨 
+        -->
+        <form id="add-form" class="add-form">
+            <input type="text" id="add-input" class="add-input" placeholder="Insert Workout Name">
+            <button class="add-button">Add</button>
+        </form>
+        <ul class="workout-list">
+        </ul>
+    </div>
+    <script>
+        //선언된 배열을 활용하며 목록 처리
+        const items = []
+        const formRef = document.querySelector('#add-form');
+        const inputRef = document.querySelector('#add-input');
+        const navbarCountRef = document.querySelector('.navbar-count');
+        formRef.addEventListener('submit', (event) => {
+            //이벤트 전파 외에도 기본이벤트 동작 자체를 취소
+            //a태그 링크기능이나 from태그의 submit이벤트를 취소할 때 유용함
+            event.preventDefault();
+            //사용자가 입력한 운동이름
+            const name = inputRef.value.trim();
+            console.log(name);
+            //자바스크립트에서는 0이 아니면 모두 참.
+            if(name){
+                console.log("true");
+                handleAdd(name);
+            }
+            formRef.reset();
+        })
+    </script>
+</body>
+</html>

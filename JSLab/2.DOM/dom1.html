@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script>
+        // run this function when the document is loaded
+        window.onload = function () {
+          // create a couple of elements in an otherwise empty HTML page
+          //createElement는 document가 제공하는 함수 입니다.
+          //파라미터 자리에는 문자타입을 써야 하고 값은 태그이름이어야 합니다.
+          //가독성이 떨어져서 권장하지 않습니다.
+          //DOM Tree구조가 잘 보이지 않습니다.
+          const heading = document.createElement("h1");//<h1></h1>
+          //텍스트 노드를 생성하는 문장이다. 텍스트는 태그이름은 없고 값만 있다.
+          const heading_text = document.createTextNode("Big Head!");
+          heading.appendChild(heading_text);//<h1>Big Head!</h1>
+          document.body.appendChild(heading);//<body>안에 추가하시오.
+        };
+      </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+      "Git Bash": {
+        "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+      }
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+    },
+    "editor.tabSize": 4,
+    "editor.lineHeight": 1.6,
+    "editor.fontLigatures": false,
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "vscode-icons",
+    "java.project.importHint": false,
+    "redhat.telemetry.enabled": false,
+    "editor.fontFamily": "CookieRun, D2Coding, Consolas, 'Courier New', monospace",
+    "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
+    "emmet.variables": {
+      "lang": "ko"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "html-css-class-completion.enableEmmetSupport": true,
+    "editor.tokenColorCustomizations": {
+      //"comments": "#ffc2c2"
+      //"comments": "#0aef47"
+      "comments": "#01a2b1"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "js/ts.implicitProjectConfig.strictNullChecks": true,
+    "json.schemas": [],
+    "git.enableSmartCommit": true,
+    "settingsSync.ignoredExtensions": [],
+    "editor.codeActionsOnSave": {},
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "java.configuration.runtimes": [],
+    "rsp-ui.enableStartServerOnActivation": [
+      {
+        "id": "redhat.vscode-community-server-connector",
+        "name": "Community Server Connector",
+        "startOnActivation": true
+      }
+    ],
+    "window.zoomLevel": 1,
+    "editor.accessibilitySupport": "off",
+    "boot-java.rewrite.reconcile": true,
+    "git.confirmSync": false,
+    "[python]": {
+      "editor.formatOnType": true
+    },
+    "terminal.integrated.tabs.enabled": false,
+    "editor.fontSize": 16,
+    "editor.wordWrap": "off",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.mouseWheelZoom": true,
+    "files.autoSave": "afterDelay",
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "tabnine.experimentalAutoImports": true,
+    "workbench.editorAssociations": {
+      "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+    }
+  }

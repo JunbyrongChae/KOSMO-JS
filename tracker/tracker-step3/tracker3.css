@@ -1,0 +1,85 @@
+*{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+.navbar{
+    font-size: 2rem;
+    padding: 1em;
+    background-color: lightgoldenrodyellow;
+}
+
+.navbar-logo{
+    color: darkgreen;
+    margin-right: 0.5em;
+}
+
+.navbar-count{
+    display: inline-block;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+}
+
+.add-input{
+    font-size: 2rem;
+    margin-right: 0.2em;
+}
+
+.add-button{
+    height: 100%;
+    font-size: 2rem;
+    padding: 0.3em 0.5em;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+button{
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.workout{
+    font-size: 2.5rem;
+    padding: 0.5em;
+    list-style: none;
+}
+/* 인라인요소는 가/세로크기 적용 안됨. */
+.workout-count{
+    display: inline-block;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.3rem;
+}
+
+.workout-button{
+    font-size: 2rem;
+    margin: 0 0.1em;
+    background-color: transparent;
+}
+
+.workout-button:hover{
+    opacity: 0.6;
+}
+
+.workout-increase{
+    color: darkred;
+}
+.workout-decrease{
+    color: darkblue;
+}
+
+.workout-delete{
+    color: gray;
+}

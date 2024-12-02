@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: blanchedalmond;
+            margin-bottom: 4px;
+            border-radius: 6px;
+        }
+        .special{
+            background-color: lightsalmon;
+        }
+        </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <aside>
+        <button class="scroll-by">Scroll by 100px(y)</button>
+        <button class="scroll-to">Scroll to 100px(y)</button>
+        <button class="scroll-into">Scroll by special</button>
+    </aside>
+    <script>
+        const special = document.querySelector('.special');
+        special.addEventListener('click', (event) => {//arrow function검색
+            console.log(`clientTo : ${event.clientX},${event.clientY}`);
+            console.log(`page : ${event.pageX},${event.pageY}`);
+        })
+        /*현재위치에서 세로방향으로 100px만큼 스크롤.scrollBy(0,100)*/
+        const scrollBy = document.querySelector('.scroll-by');
+        /*상단에서 세로방향으로 100px만큼 위치이동.scrollTo(0,100)*/
+        const scrollTo = document.querySelector(".scroll-to");
+        /*요소가 화면에 보이도록 스크롤 위치를 자동으로 조정함.*/
+        const scrollInto = document.querySelector(".scroll-into");
+        scrollBy.addEventListener('click', () => {
+            window.scrollBy(0, 100);
+        })
+        scrollTo.addEventListener('click', () => {
+            window.scrollTo(0, 100);
+        })
+        scrollInto.addEventListener('click', () => {
+            special.scrollIntoView();
+        })
+    </script>
+</body>
+</html>
+<!-- 
+선택자의 종류
+1) class선택자
+    -ex) .test
+2) id선택자
+    -#test
+3) tag(node)선택자
+    -test
+
+선택자를 접근할 수 있는 API가 있다. 
+    - document,함수이름:querySelector(클래스선택자|id선택자|tag선택자)
+브라우저 지원하는 내장객체(개체)
+    - window, document - Javascript의 영역
+
+///
+div는 블록요소 (span는 인라인요소)
+블록요소는 크기가 있어서 node가 차지하는 공간을 제외한 나머지는 여백으로 채움
+인라인요소도 display속성을 사용하면 블록요소처럼 사용할 수 있음
+div*10 -> Emmet단축키로 검색
+.wrap>.left .right -> Emmet단축키로 검색
+
+어제 코드 중 <script src="./main.js"defer></script>
+XXX.html, XXX.js, XXX.css들은 모두 로컬에 다운로드 된 후에 로컬브라우저가 처리합니다.
+다운로드되는데 시간이 걸린다(지연발생)
+시점의 문제로 인해서 special선택자를 찾을 수 없는 상황 발생할 수 있다.
+html문서는 절차지향적이라서 위에서 아래로 읽어서 처리
+따라서 main.js를 먼저 실행하면 아직 DOM Tree가 그려지지 않은 상태라서
+undefined error가 발생
+-->

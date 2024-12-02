@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mem_id" value="kiwi" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        const NEWS_URL = "https://api.hnpwa.com/v0/news/1.json";
+        $.ajax({//XMLHttpRequest대신 jquery가 지원하는 함수임
+            method: "GET",
+            url: NEWS_URL,
+            dataType: "json",
+            success:function(data){
+                console.log(data)
+            }
+        })
+    </script>
+</body>
+</html>

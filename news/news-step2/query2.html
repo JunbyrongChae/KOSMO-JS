@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정key의 Query String값</title>
+</head>
+<body>
+    <script>
+        const query = window.location.search;
+        const urlParams = new URLSearchParams(query);
+        const age = urlParams.get('age');
+        const title = urlParams.get('title');
+        document.write("age : "+age+"\n")
+        document.write("title : "+title+"\n")
+    </script>
+</body>
+
+//http://127.0.0.1:5500/news-step2/query2.html?title=자바의정석&age=30

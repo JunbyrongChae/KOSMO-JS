@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET","http://127.0.0.1:5500/news-step1/1.json",false);
+        ajax.send();
+        const res = ajax.response;
+        //console.log(typeof res)//string
+        //console.log(res)
+        const imsi = JSON.parse(res);
+        //document.write(imsi);
+        for(let i =0;i<imsi.length;i++){
+            document.write(`제목 : ${imsi[i].title}, 아이디 : ${imsi[i].id}, 시간 : ${imsi[i].time_ago} <br />`)
+        }
+    </script>
+</body>
+</html>

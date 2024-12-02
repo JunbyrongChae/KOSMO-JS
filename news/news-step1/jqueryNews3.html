@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm">
+        <input type="text" id="mem_id" name="mem_id" value="kiwi" />
+        <input type="text" id="mem_pw" name="mem_pw" value="123" />
+    </form>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        //const root = document.querySelector("#root")
+        const mem_id = $(frm.mem_id).val()
+        const mem_pw = $(frm.mem_pw).val()
+        console.log(`사용자 아이디 :${mem_id}, 사용자비번 : ${mem_pw}`)
+        //root.innerHTML = "<b>안녕</b>"
+    </script>
+</body>
+</html>

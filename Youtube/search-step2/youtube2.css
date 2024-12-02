@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.input {
+    flex-basis: 100%;
+    font-size: 1.2rem;
+    outline: 0;
+}
+
+.button {
+    background-color: darkgray;
+    outline: 0;
+}
+
+.buttonImg {
+    height : 100%;
+    padding: 0.5em 0.2em;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 0.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video img {
+    width: 100%;
+    height: auto;
+    transition: transform 250ms ease-in-out;
+}
+
+.video:hover img {
+    transform: scale(1.05);
+}
+
+.video:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.thumbnail {
+    width: 40%;
+    height: 100%;
+}
+
+.title,
+.channel {
+    margin:  10px;
+    font-size: 0.8rem;
+}
+
+.channel {
+    font-size: 0.6rem;
+}

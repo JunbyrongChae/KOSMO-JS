@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrap{
+    width: 800px;
+    border: 10px solid black;
+    margin: 100px auto;
+}
+
+.left{
+    width: 400px;
+    height: 400px;
+    background-color: lightskyblue;
+    float: left;
+}
+
+.right{
+    width: 400px;
+    height: 400px;
+    background-color: lightgreen;
+    float: left;
+    position: relative;
+}
+
+.right p{
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*
+absolute는 무조건 기준점이 부모 태그가 아니라
+부모요소 중에 position이 있는 요소 중 가장
+가까운 요소가 기준점이 된다.
+그래서 p태그 부모인 right에 position이 없으니까
+위에 wrap을 보는데 여기도 position이 없으니까
+부모인 body에 위치함.
+
+결론
+relative는 자기영역을 유지하면서 있는데
+absolute는 자기영역을 무시하고 뜯어져 나온다.
+*/
+
+.bottom{
+    width: 800px;
+    height: 100px;
+    background-color: pink;
+    float: left;
+}
+
+.wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}

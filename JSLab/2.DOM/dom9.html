@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function imgPrint(){
+            alert("imgPrint호출 성공")
+            const img = document.createElement("img")
+            img.setAttribute("src","../../images/dog.png")
+            img.setAttribute("width",500)
+            img.setAttribute("height",500)
+            document.body.appendChild(img)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="imgPrint()">그림보기</button>
+</body>
+</html>
