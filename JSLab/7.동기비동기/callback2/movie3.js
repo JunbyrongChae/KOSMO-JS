@@ -1,22 +1,29 @@
-const getList = (query, callback) => {
-    fetch(`https://omdbapi.com/?apikey=b361af58&s=${query}`)
-        .then(res =>  res.json())//Promise 인스턴스
-        .then(res => {
-            console.log(res)
-            callback()
+//arrow function에서 파라미터 갯수가 1개 일때는 괄호 생략가능함
+//처리 순서가 고정되도록 Promise사용하여 변경해 본다.
+const getList = query => {
+    return new Promise(resolve => {
+        fetch(`https://omdbapi.com/?apikey=b361af58&s=${query}`)
+            .then(res =>  res.json())//Promise 인스턴스
+            .then(res => {
+                console.log(res)
+                resolve()
         })
+    })
 }
 
 //insert here
-getList('frozen', () => {
-    console.log('겨울왕국')
-    getList('avengers', () => {
-        console.log('어벤져스')
-        getList('avatar', () => {
-            console.log('아바타')
-        })
+getList('frozen')
+    .then(() => {
+        console.log('겨울왕국')
+        return getList('avengers')
     })
-})
+    .then(() => {
+        console.log('어벤져스')
+        return getList('avatar')
+    })
+    .then(() => {
+        console.log('아바타')
+    })
 
 /*
 출력되는 순서가 보장되지 않는 다는 점을 문제 삼아야 한다.
