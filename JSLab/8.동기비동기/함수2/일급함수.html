@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- 
-    <script type="text/javascript"> 
-    ES6 모듈화 지원함 - import, export
+    <!-- <script type="module"> 
+        ES6 모듈화 지원함. - import, export    
     -->
-    <script type="module">
+    <script type="text/javascript">
         //commonjs
         function hamsu1(){
             return "hamsu1"
         }
-        function hamsu2(hamsu1,msg){
-            console.log(hamsu1()+msg)
+        function hamsu2(hamsu1, msg){
+            console.log(hamsu1() + msg)
         }
-        hamsu2(hamsu1,"JavaScript")
-        const wrap = function(){
+        hamsu2(hamsu1, 'Javascript')
+        const wrap = function () {
             
         }
-        const wrap1 = () => {
+        const wrap1 =  () => {
 
         }
     </script>
-    <!-- 
-    함수를 다른 변수와 동일하게 다루는 언어는 일급함수를 가졌다 라고 함
-    함수가 다른 함수에 파라미터로 제공(일급함수)되거나
-    함수가 함수를 반환(고차함수) 할 수 있고
-    변수에 할당할 수도 있다.
-    함수가 선언되어있다고 실행되는것 아님
-    실행하려면 호출해야함
+    <!--
+        함수를 다른 변수와 동일하게 다루는 언어는 일급 함수를 가졌다 라고 합니다.
+        함수가 다른 함수에 파라미터로 제공(일급함수)되거나 
+        함수가 함수를 반환(고차함수)할 수 있고 변수에 할당할 수도 있다.
+        함수가 선언되어 있다고 해서 실행되는 것은 아니다.
+        실행을 하려면 호출 해야 합니다.
     -->
 </body>
-
 </html>

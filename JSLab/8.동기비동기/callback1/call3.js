@@ -4,6 +4,7 @@
 const a = (callback) => {
     setTimeout(() => {
         console.log(1)
+        //console.log(callback)
         callback()//b()
     }, 2000)
 }
